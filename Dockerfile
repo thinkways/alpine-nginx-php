@@ -21,7 +21,7 @@ RUN \
   # download unpack php-src
   && mkdir /tmp/php && cd /tmp/php \
   && wget https://github.com/php/php-src/archive/php-7.4.7.tar.gz \
-  && tar xzf php-7.4.7.tar.gz \
+  && tar xzf php*.tar.gz \
   && cd php-src-php-7.4.7 \
 
   #compile
