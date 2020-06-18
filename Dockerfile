@@ -8,13 +8,11 @@ RUN set -x \
 
 # Install runtime dependancies
 RUN \
-  apk --no-cache --update upgrade && \
   apk add --no-cache --virtual .run-deps \
   curl zlib tar make libxml2 readline freetype openssl libjpeg-turbo libpng libmcrypt libwebp icu
 
 RUN \
   # Install build dependancies
-  apk --no-cache --update upgrade && \
   apk add --update \
   --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
   --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
