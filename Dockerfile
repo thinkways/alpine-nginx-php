@@ -13,7 +13,10 @@ RUN \
 
 RUN \
   # Install build dependancies
-  apk add --no-cache --virtual .build-deps \
+  apk add --update \
+  --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
+  --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
+  --no-cache --virtual .build-deps \
   build-base re2c file readline-dev autoconf binutils bison \
   libxml2-dev curl-dev freetype-dev openssl-dev libjpeg-turbo-dev libpng-dev \
   libwebp-dev libmcrypt-dev gmp-dev icu-dev libmemcached-dev sqlite-dev oniguruma-dev wget git \
