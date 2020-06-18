@@ -8,18 +8,20 @@ RUN set -x \
 
 # Install runtime dependancies
 RUN \
+  apk --no-cache --update upgrade && \
   apk add --no-cache --virtual .run-deps \
   curl zlib tar make libxml2 readline freetype openssl libjpeg-turbo libpng libmcrypt libwebp icu
 
 RUN \
   # Install build dependancies
+  apk --no-cache --update upgrade && \
   apk add --update \
   --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
   --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
   --no-cache --virtual .build-deps \
   build-base re2c file readline-dev autoconf binutils bison \
   libxml2-dev curl-dev freetype-dev openssl-dev libjpeg-turbo-dev libpng-dev \
-  libwebp-dev libmcrypt-dev gmp-dev icu-dev libmemcached-dev sqlite-dev oniguruma-dev wget git \
+  libwebp-dev libmcrypt-dev gmp-dev icu-dev libmemcached-dev sqlite-dev oniguruma-dev musl-dev wget git \
 
   # download unpack php-src
   && mkdir /tmp/php && cd /tmp/php \
