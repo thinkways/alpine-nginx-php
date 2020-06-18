@@ -18,7 +18,7 @@ RUN \
   --no-cache --virtual .build-deps \
   build-base re2c file readline-dev autoconf binutils bison \
   libxml2-dev curl-dev freetype-dev openssl-dev libjpeg-turbo-dev libpng-dev \
-  libwebp-dev libmcrypt-dev gmp-dev icu-dev libmemcached-dev sqlite-dev oniguruma-dev musl-dev wget git \
+  libwebp-dev libmcrypt-dev gmp-dev icu-dev libmemcached-dev wget git \
 
   # download unpack php-src
   && mkdir /tmp/php && cd /tmp/php \
