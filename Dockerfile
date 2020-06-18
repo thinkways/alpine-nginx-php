@@ -5,7 +5,7 @@ RUN set -x \
   && mkdir -p /var/lib/php7/sessions \
   && chown -R www-data:www-data /var/lib/php7/sessions
 
-RUN apk add --no-cache sqlite-libs
+RUN apk add --no-cache sqlite-libs oniguruma
 
 # Install runtime dependancies
 RUN \
