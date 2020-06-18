@@ -1,5 +1,4 @@
-FROM ej52/alpine-nginx:1.13.1
-LABEL maintainer Elton Renda "elton@ebrdev.co.za"
+FROM thinkinn/alpine-nginx:latest
 
 RUN set -x \
   # create session dir and set owner to www-data
